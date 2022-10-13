@@ -48,3 +48,23 @@ class ITBook extends Book2 {
 let jsBook = new ITBook('Learning JS Algorithms', '200', '1234567890', 'JavaScript');
 console.log(jsBook.title);
 console.log(jsBook.printTechnology());
+
+//Getters and setters:
+
+class Person {
+    constructor(name) {
+        this._name = name;
+    }
+    get name(){
+        return this._name;
+    }   
+    set name(value){
+        this._name = value;
+    }
+}
+let lotrChar = new Person('Frodo');
+console.log(lotrChar.name);
+lotrChar.name = 'Gandalf';
+console.log(lotrChar.name);
+lotrChar._name = 'Sam';
+console.log(lotrChar.name);
