@@ -51,3 +51,19 @@ class MyObject implements Comparable {
         return this.age > b.age ? 1 : -1;
     }
 }
+
+// Genéricos:
+
+interface Comparable2<T> {
+    compareTo(b: T): number;
+}
+
+class MyObject2 implements Comparable2<MyObject2> {
+    age: number; 
+    compareTo(b: MyObject2): number {
+        if(this.age === b.age) {
+            return 0;
+        }
+        return this.age > b.age ? 1 : -1;
+    }
+}
