@@ -31,3 +31,20 @@ let book2 = new Book2('title2', 'pag', 'isbn');
 console.log(book2.title);
 book2.title = 'new title2';
 console.log(book2.title);
+
+
+//Inheritance ES2015:
+
+class ITBook extends Book2 {
+    constructor(title, pages, isbn, technology) {
+        super(title, pages, isbn);
+        this.technology = technology;
+    }
+
+    printTechnology() {
+        console.log(this.technology);
+    }
+}
+let jsBook = new ITBook('Learning JS Algorithms', '200', '1234567890', 'JavaScript');
+console.log(jsBook.title);
+console.log(jsBook.printTechnology());
