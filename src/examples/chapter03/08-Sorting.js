@@ -42,3 +42,24 @@ function comparePerson(a, b) {
     return 0; 
 }
 console.log(friends.sort(comparePerson));
+
+// Ordenando strings: 
+
+let names = ['Ana', 'ana', 'john', 'John'];
+console.log(names.sort());
+
+names = ['Ana', 'ana', 'john', 'John'];
+console.log(names.sort((a, b) => {
+    if (a.toLowerCase() < b.toLowerCase()) {
+        return -1; 
+    }
+    if(a.toLowerCase() > b.toLowerCase()) {
+        return 1; 
+    }
+    return 0;
+}));
+names.sort((a, b) => a.localeCompare(b));
+console.log(names);
+
+const names2 = ['Maéve', 'Maeve'];
+console.log(names2.sort((a, b) => a.localeCompare(b)));
