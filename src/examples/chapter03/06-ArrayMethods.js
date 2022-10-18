@@ -17,10 +17,16 @@ function isEven(x) {
     console.log(x);
     return x % 2 === 0 ? true : false;
 }
-let numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 // Com a sintaxe ES2015(ES6): ArrowFunction
 
 const isEven1 = x => x % 2 === 0; 
 
-console.log('Numbers:', numbers1)
+console.log('Numbers:', numbers)
+
+// Iterando com o método 'every': 
+
+numbers.every(isEven);
+console.log('numbers.every(isEven): ', numbers.every(isEven));
+
