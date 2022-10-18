@@ -36,3 +36,23 @@ console.log('numbers.some(isEven): ', numbers.some(isEven));
 // Iterando com o 'forEach':
 
 numbers.forEach(x => console.log(`${x} é multiplo de 2:`, x % 2 === 0));
+
+// Os próximos métodos, 'map', 'filter', e 'reduce', são a base da programação funcional em Javascript. 
+// Usando 'map' e 'filter':
+// 'map': 
+const myMap = numbers.map(isEven);
+console.log(myMap); // Ele armazena os resultados da função isEven, passada para o método 'map'.
+
+console.log(myMap[0]);
+console.log(myMap[1]);
+
+//'filter': 
+const evenNumbers = numbers.filter(isEven);
+console.log(evenNumbers); // Ele devolve um novo array com os elementos os quais a função devolveu true. 
+
+// Usando o método 'reduce':
+// Podemos usar essa função para devolver um valor que será somado a um acumulador, o qual será devolvido depois que o método 'reduce' parar de executar. 
+// Isso pode ser útil se quisermos somar todos os valores de um array. 
+
+numbers.reduce((previous, current) => previous + current);
+console.log(numbers.reduce((previous, current) => previous + current));
