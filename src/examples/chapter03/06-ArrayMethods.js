@@ -32,3 +32,7 @@ console.log('numbers.every(isEven): ', numbers.every(isEven));
 // Iterando com o método 'some': 
 
 console.log('numbers.some(isEven): ', numbers.some(isEven));
+
+// Iterando com o 'forEach':
+
+numbers.forEach(x => console.log(`${x} é multiplo de 2:`, x % 2 === 0));
