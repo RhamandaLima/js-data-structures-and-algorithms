@@ -27,6 +27,8 @@ console.log('Numbers:', numbers)
 
 // Iterando com o método 'every': 
 
-numbers.every(isEven);
 console.log('numbers.every(isEven): ', numbers.every(isEven));
 
+// Iterando com o método 'some': 
+
+console.log('numbers.some(isEven): ', numbers.some(isEven));
