@@ -44,10 +44,21 @@ const aValues = numbers.values();
 console.log(aValues.next());
 
 // Usando o método 'from':
-// O método 'Array.from' cria outro arrat a partir de um array existente. 
+// O método 'Array.from' cria outro array a partir de um array existente. 
 
 let numbers2 = Array.from(numbers);
 console.log(numbers2);
 
 let evens = Array.from(numbers, x => (x % 2 == 0));
 console.log(evens);
+
+// Usando o método 'Array.of': 
+
+let numbers3 = Array.of(1);
+console.log(numbers3);
+
+let numbers4 = Array.of(1, 2, 3, 4, 5, 6);
+console.log(numbers4);
+
+let numbersCopy = Array.of(...numbers4);
+console.log(numbersCopy);
