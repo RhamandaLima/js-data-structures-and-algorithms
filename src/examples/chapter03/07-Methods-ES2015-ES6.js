@@ -62,3 +62,18 @@ console.log(numbers4);
 
 let numbersCopy = Array.of(...numbers4);
 console.log(numbersCopy);
+
+// Usando o método fill:
+
+let numbersCopy1 = Array.of(1, 2, 3, 4, 5, 6);
+numbersCopy1.fill(0);
+console.log(numbersCopy1);
+
+numbersCopy1.fill(2, 1); // passando o índice de início a partir do qual queremos preencher
+console.log(numbersCopy1);
+
+numbersCopy1.fill(1, 3, 5);
+console.log(numbersCopy1); // passando o índice inicial e final
+
+let ones = Array(6).fill(1);
+console.log(ones);
