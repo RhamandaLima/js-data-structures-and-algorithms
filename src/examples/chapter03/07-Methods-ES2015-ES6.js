@@ -8,7 +8,6 @@ for (const n of numbers) {
 
 // Usando o objeto @@iterator:
 // Para usá-la, é necessário acessar a propriedade 'Symbol.iterator'. 
-
 let iterator = numbers[Symbol.iterator]();
 console.log(iterator.next().value); 
 console.log(iterator.next().value); 
@@ -21,3 +20,25 @@ console.log(iterator.next().value);
 for (const n of iterator) {
     console.log(n);
 }
+
+// Usando métodos 'entries', 'keys' e 'values' de array
+// 'entries': 
+let aEntries = numbers.entries();
+console.log('[posição, valor]:', aEntries.next().value);
+console.log('[posição, valor]:', aEntries.next().value);
+console.log('[posição, valor]:', aEntries.next().value);
+
+aEntries = numbers.entries(); 
+for (const n of aEntries) {
+    console.log('[posição, valor]:', n);
+}
+
+// 'keys': 
+const aKeys = numbers.keys();
+console.log(aKeys.next());
+console.log(aKeys.next());
+console.log(aKeys.next());
+
+// 'values':
+const aValues = numbers.values();
+console.log(aValues.next());
